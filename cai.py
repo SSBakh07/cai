@@ -7,6 +7,12 @@ class CAi(commands.Cog):
         self.bot = bot
         self.last_msg = "I saw nothing"
         self.event_count = 0
+        self.triggers = {
+            "thank you fazuran": ["You're very welcome <3", "Fuck Dyno :)"],
+            "i love nya": ["Same u///w///u"],
+            "i love zef": ["Same u///w///u"],
+            "i am saqi": ["Oh hey simp"]
+        }
 
     @commands.command()
     async def mycom(self, ctx):
@@ -14,12 +20,14 @@ class CAi(commands.Cog):
         # Your code will go here
         await ctx.send("I can do stuff!")
 
-    @client.event
+    @commands.Cog.listener()
     async def on_message(self, message):
-        if "thank you fazuran" in message.content.lower():
-            channel = message.channel
-            self.last_msg = message.content
-            await channel.send("You're very welcome <3")
+        self.last_msg = message.content
+        # trigger_keys = self.triggers.keys()
+        # msg_lower = message.content.lower()
+        # for trig in trigger_keys:
+        #     if trig in msg_lower
+        
     
     @commands.command()
     async def lastthingyousaw(self, ctx):
