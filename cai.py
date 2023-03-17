@@ -1,4 +1,5 @@
 from redbot.core import commands
+from random import randint
 
 class CAi(commands.Cog):
     """My custom cog"""
@@ -29,7 +30,8 @@ class CAi(commands.Cog):
         msg_lower = message.content.lower()
         for trig in trigger_keys:
             if trig in msg_lower:
-                await message.channel.send(self.triggers[trig][0])
+                responses = self.triggers[trig]
+                await message.channel.send(responses[randint(0, len(responses))])
     
     @commands.command()
     async def lastthingyousaw(self, ctx):
