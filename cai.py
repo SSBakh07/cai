@@ -13,14 +13,19 @@ class CAi(commands.Cog):
         # Your code will go here
         await ctx.send("I can do stuff!")
 
-    @client.event
-    async def on_message(message):
-        if "thank you fazuran" in message.content.lower():
-            channel = message.channel
-            self.last_msg = message.content
-            await channel.send("You're very welcome <3")
+    # @client.event
+    # async def on_message(message):
+    #     if "thank you fazuran" in message.content.lower():
+    #         channel = message.channel
+    #         self.last_msg = message.content
+    #         await channel.send("You're very welcome <3")
     
     @commands.command()
     async def lastthingyousaw(self, ctx):
         """?????"""
         await ctx.send(self.last_msg)
+
+    @commands.command()
+    async def thankyou(self, ctx):
+        """You *should* appreciate her."""
+        await ctx.send("You're very welcome <3")
