@@ -12,7 +12,8 @@ class CAi(commands.Cog):
             "i love nya": ["Same u///w///u"],
             "i love zef": ["Same u///w///u"],
             "i am saqi": ["Oh hey simp"],
-            "hello fazuran": ["Hello! <3"]
+            "hello fazuran": ["Hello! <3"],
+            "hi fazuran": ["Hi!! <3"]
         }
 
     @commands.command()
@@ -28,7 +29,7 @@ class CAi(commands.Cog):
         msg_lower = message.content.lower()
         for trig in trigger_keys:
             if trig in msg_lower:
-                await message.channel.send(self.triggers[trig])
+                await message.channel.send(self.triggers[trig][0])
     
     @commands.command()
     async def lastthingyousaw(self, ctx):
