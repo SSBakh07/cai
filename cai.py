@@ -31,7 +31,7 @@ class CAi(commands.Cog):
         for trig in trigger_keys:
             if trig in msg_lower:
                 responses = self.triggers[trig]
-                await message.channel.send(responses[randint(0, len(responses))])
+                await message.channel.send(responses[randint(0, len(responses)-1)])
     
     @commands.command()
     async def lastthingyousaw(self, ctx):
