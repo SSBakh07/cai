@@ -14,7 +14,9 @@ class CAi(commands.Cog):
             "i love zef": ["Same u///w///u"],
             "i am saqi": ["Oh hey simp"],
             "hello fazuran": ["Hello! <3"],
-            "hi fazuran": ["Hi!! <3"]
+            "hi fazuran": ["Hi!! <3"],
+            "ily fazuran": ["I love you too <3"],
+            "i love you fazuran": ["I love you too <3"]
         }
 
     @commands.command()
