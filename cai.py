@@ -44,3 +44,14 @@ class CAi(commands.Cog):
     async def thankyou(self, ctx):
         """You *should* appreciate her."""
         await ctx.send("You're very welcome <3")
+
+
+    @commands.command()
+    async def lofi(self, ctx):
+        """play lofi beats to relax/study to"""
+        await ctx.send("hkvh!play https://www.youtube.com/watch?v=jfKfPfyJRdk")
+
+    @commands.command()
+    async def stoplofi(self, ctx):
+        """stop playing lofi beats to relax/study to"""
+        await ctx.send("hkvh!disconnect")
